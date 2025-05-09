@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sri Shivs Sai Motors - Professional Bike Service & Repair</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#3176FF", secondary: "#FF6B35" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+      }
+      .hero-section {
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 40%, rgba(255, 255, 255, 0.7) 60%, rgba(255, 255, 255, 0.5) 70%, rgba(255, 255, 255, 0.3) 80%, rgba(255, 255, 255, 0) 100%), url('https://readdy.ai/api/search-image?query=Professional%20motorcycle%20repair%20shop%20with%20modern%20tools%20and%20equipment%2C%20high-end%20motorcycles%20in%20the%20background%2C%20clean%20and%20organized%20workspace%2C%20professional%20lighting%2C%20mechanics%20working%20on%20bikes%2C%20high-quality%20image%20with%20depth%20of%20field%2C%20photorealistic&width=1920&height=1080&seq=1&orientation=landscape');
+      background-size: cover;
+      background-position: center;
+      }
+      .header {
+      transition: background-color 0.3s ease;
+      }
+      .header.scrolled {
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+      }
+      .bike-animation {
+      animation: drive 15s linear infinite;
+      }
+      @keyframes drive {
+      0% {
+      transform: translateX(-100%);
+      }
+      100% {
+      transform: translateX(100vw);
+      }
+      }
+      .gear-animation {
+      animation: rotate 10s linear infinite;
+      }
+      @keyframes rotate {
+      0% {
+      transform: rotate(0deg);
+      }
+      100% {
+      transform: rotate(360deg);
+      }
+      }
+      .custom-checkbox {
+      position: relative;
+      padding-left: 30px;
+      cursor: pointer;
+      user-select: none;
+      }
+      .custom-checkbox input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+      }
+      .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      background-color: #f3f4f6;
+      border-radius: 4px;
+      border: 1px solid #d1d5db;
+      }
+      .custom-checkbox:hover input ~ .checkmark {
+      background-color: #e5e7eb;
+      }
+      .custom-checkbox input:checked ~ .checkmark {
+      background-color: #3176FF;
+      border: none;
+      }
+      .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+      }
+      .custom-checkbox input:checked ~ .checkmark:after {
+      display: block;
+      }
+      .custom-checkbox .checkmark:after {
+      left: 8px;
+      top: 4px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+      }
+      .custom-switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+      }
+      .custom-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+      }
+      .switch-slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #e5e7eb;
+      transition: .4s;
+      border-radius: 34px;
+      }
+      .switch-slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+      }
+      input:checked + .switch-slider {
+      background-color: #3176FF;
+      }
+      input:checked + .switch-slider:before {
+      transform: translateX(26px);
+      }
+      .tab-active {
+      background-color: #3176FF;
+      color: white;
+      }
+      .form-step {
+      display: none;
+      }
+      .form-step.active {
+      display: block;
+      }
+      .progress-step {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #e5e7eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+      }
+      .progress-step.active {
+      background-color: #3176FF;
+      color: white;
+      }
+      .progress-step.completed {
+      background-color: #10B981;
+      color: white;
+      }
+      .progress-line {
+      flex: 1;
+      height: 2px;
+      background-color: #e5e7eb;
+      }
+      .progress-line.active {
+      background-color: #3176FF;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header fixed w-full z-50 py-4 px-6">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="flex items-center">
+          <div
+            class="w-10 h-10 flex items-center justify-center gear-animation mr-2"
+          >
+            <i class="ri-steering-2-fill ri-2x text-primary"></i>
+          </div>
+          <h1 class="font-['Pacifico'] text-2xl text-primary">
+            Sri Shivs Sai Motors
+          </h1>
+        </div>
+        <nav class="hidden md:flex space-x-6">
+          <a
+            href="#home"
+            class="font-medium hover:text-primary transition-colors"
+            >Home</a
+          >
+          <a
+            href="#services"
+            class="font-medium hover:text-primary transition-colors"
+            >Services</a
+          >
+          <a
+            href="#booking"
+            class="font-medium hover:text-primary transition-colors"
+            >Book Service</a
+          >
+          <a
+            href="#contact"
+            class="font-medium hover:text-primary transition-colors"
+            >Contact</a
+          >
+          <button
+            id="loginBtn"
+            class="font-medium text-primary hover:text-primary/80 transition-colors"
+          >
+            Login / Register
+          </button>
+        </nav>
+        <button
+          class="md:hidden w-10 h-10 flex items-center justify-center"
+          id="mobileMenuBtn"
+        >
+          <i class="ri-menu-line ri-2x"></i>
+        </button>
+      </div>
+    </header>
+    <!-- Mobile Menu -->
+    <div
+      id="mobileMenu"
+      class="fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out"
+    >
+      <div class="flex justify-end p-6">
+        <button
+          id="closeMenuBtn"
+          class="w-10 h-10 flex items-center justify-center"
+        >
+          <i class="ri-close-line ri-2x"></i>
+        </button>
+      </div>
+      <nav class="flex flex-col items-center space-y-6 mt-10">
+        <a
+          href="#home"
+          class="text-xl font-medium hover:text-primary transition-colors"
+          >Home</a
+        >
+        <a
+          href="#services"
+          class="text-xl font-medium hover:text-primary transition-colors"
+          >Services</a
+        >
+        <a
+          href="#booking"
+          class="text-xl font-medium hover:text-primary transition-colors"
+          >Book Service</a
+        >
+        <a
+          href="#contact"
+          class="text-xl font-medium hover:text-primary transition-colors"
+          >Contact</a
+        >
+        <button
+          id="mobileLoginBtn"
+          class="text-xl font-medium text-primary hover:text-primary/80 transition-colors"
+        >
+          Login / Register
+        </button>
+      </nav>
+    </div>
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="hero-section min-h-screen flex items-center pt-20"
+    >
+      <div class="container mx-auto px-6">
+        <div class="w-full flex flex-col md:flex-row items-center">
+          <div class="w-full md:w-1/2 py-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">
+              Professional Bike Service & Repair
+            </h1>
+            <p class="text-lg mb-8">
+              Expert mechanics for all bike models. We offer complete repairs,
+              servicing, and water wash services in Nizampet, Hyderabad.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#booking"
+                class="bg-primary text-white px-8 py-3 rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap flex items-center justify-center"
+              >
+                <i class="ri-calendar-check-line mr-2"></i> Book Now
+              </a>
+              <a
+                href="#services"
+                class="border border-gray-300 px-8 py-3 rounded-button font-medium hover:bg-gray-50 transition-colors whitespace-nowrap flex items-center justify-center"
+              >
+                <i class="ri-service-line mr-2"></i> Our Services
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Animated Bike -->
+    <div class="relative overflow-hidden h-20 bg-gray-50">
+      <div class="bike-animation absolute bottom-0">
+        <i class="ri-bike-fill ri-3x text-primary"></i>
+      </div>
+    </div>
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">Our Services</h2>
+          <p class="max-w-2xl mx-auto text-gray-600">
+            We provide comprehensive motorcycle services to keep your bike
+            running at its best.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div
+            class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="ri-tools-fill ri-2x text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">General Service</h3>
+            <p class="text-gray-600">
+              Complete bike check-up including oil change, filter replacement,
+              and overall inspection to ensure optimal performance.
+            </p>
+          </div>
+          <!-- Service 2 -->
+          <div
+            class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="ri-hammer-line ri-2x text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Repairs</h3>
+            <p class="text-gray-600">
+              Expert repair services for all bike models, from minor fixes to
+              major overhauls by our skilled technicians.
+            </p>
+          </div>
+          <!-- Service 3 -->
+          <div
+            class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="ri-drop-fill ri-2x text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Water Wash</h3>
+            <p class="text-gray-600">
+              Professional cleaning service to keep your bike looking brand new
+              with special attention to all components.
+            </p>
+          </div>
+          <!-- Service 4 -->
+          <div
+            class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="ri-settings-line ri-2x text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Parts Replacement</h3>
+            <p class="text-gray-600">
+              Quality replacement parts for all bike models with genuine or
+              compatible components as per your preference.
+            </p>
+          </div>
+          <!-- Service 5 -->
+          <div
+            class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="ri-alarm-warning-line ri-2x text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Emergency Service</h3>
+            <p class="text-gray-600">
+              Quick response emergency services for breakdowns and urgent
+              repairs to get you back on the road.
+            </p>
+          </div>
+          <!-- Service 6 -->
+          <div
+            class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="ri-search-eye-line ri-2x text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Diagnostics</h3>
+            <p class="text-gray-600">
+              Advanced diagnostic services to identify and resolve complex
+              issues affecting your bike's performance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Booking Section -->
+    <section id="booking" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">Book Your Service</h2>
+          <p class="max-w-2xl mx-auto text-gray-600">
+            Schedule your bike service in just a few steps. Choose your
+            preferred time slot and we'll take care of the rest.
+          </p>
+        </div>
+        <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-8">
+          <!-- Progress Bar -->
+          <div class="flex items-center justify-between mb-8">
+            <div class="progress-step active">1</div>
+            <div class="progress-line"></div>
+            <div class="progress-step">2</div>
+            <div class="progress-line"></div>
+            <div class="progress-step">3</div>
+          </div>
+          <form id="bookingForm">
+            <!-- Step 1: Vehicle Details -->
+            <div class="form-step active" id="step1">
+              <h3 class="text-xl font-semibold mb-6">Vehicle Details</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label
+                    for="bikeModel"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Bike Model</label
+                  >
+                  <input
+                    type="text"
+                    id="bikeModel"
+                    name="bikeModel"
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    placeholder="e.g. Honda CB Hornet 160R"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    for="bikeColor"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Bike Color</label
+                  >
+                  <input
+                    type="text"
+                    id="bikeColor"
+                    name="bikeColor"
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    placeholder="e.g. Metallic Blue"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="mb-6">
+                <label
+                  for="bikeNumber"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Registration Number</label
+                >
+                <input
+                  type="text"
+                  id="bikeNumber"
+                  name="bikeNumber"
+                  class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  placeholder="e.g. TS 09 AB 1234"
+                  required
+                />
+              </div>
+              <div class="mb-6">
+                <label
+                  for="complaint"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Complaint/Service Required</label
+                >
+                <textarea
+                  id="complaint"
+                  name="complaint"
+                  rows="4"
+                  class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  placeholder="Describe the issues or service needed..."
+                  required
+                ></textarea>
+              </div>
+              <div class="flex justify-end">
+                <button
+                  type="button"
+                  id="step1Next"
+                  class="bg-primary text-white px-6 py-2 rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap"
+                >
+                  Next Step
+                </button>
+              </div>
+            </div>
+            <!-- Step 2: Time Slot Selection -->
+            <div class="form-step" id="step2">
+              <h3 class="text-xl font-semibold mb-6">Select Time Slot</h3>
+              <div class="mb-6">
+                <label
+                  for="serviceDate"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Service Date</label
+                >
+                <input
+                  type="date"
+                  id="serviceDate"
+                  name="serviceDate"
+                  class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  required
+                  min="2025-05-09"
+                />
+              </div>
+              <div class="mb-6">
+                <p class="block text-sm font-medium text-gray-700 mb-3">
+                  Available Time Slots
+                </p>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                  <label class="custom-checkbox">
+                    <input type="radio" name="timeSlot" value="09:00 - 11:00" />
+                    <span class="checkmark"></span>
+                    09:00 - 11:00 AM
+                  </label>
+                  <label class="custom-checkbox">
+                    <input type="radio" name="timeSlot" value="11:00 - 13:00" />
+                    <span class="checkmark"></span>
+                    11:00 - 01:00 PM
+                  </label>
+                  <label class="custom-checkbox">
+                    <input type="radio" name="timeSlot" value="14:00 - 16:00" />
+                    <span class="checkmark"></span>
+                    02:00 - 04:00 PM
+                  </label>
+                  <label class="custom-checkbox">
+                    <input type="radio" name="timeSlot" value="16:00 - 18:00" />
+                    <span class="checkmark"></span>
+                    04:00 - 06:00 PM
+                  </label>
+                  <label class="custom-checkbox">
+                    <input type="radio" name="timeSlot" value="18:00 - 20:00" />
+                    <span class="checkmark"></span>
+                    06:00 - 08:00 PM
+                  </label>
+                </div>
+              </div>
+              <div class="flex justify-between">
+                <button
+                  type="button"
+                  id="step2Prev"
+                  class="border border-gray-300 px-6 py-2 rounded-button font-medium hover:bg-gray-50 transition-colors whitespace-nowrap"
+                >
+                  Previous
+                </button>
+                <button
+                  type="button"
+                  id="step2Next"
+                  class="bg-primary text-white px-6 py-2 rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap"
+                >
+                  Next Step
+                </button>
+              </div>
+            </div>
+            <!-- Step 3: Customer Details -->
+            <div class="form-step" id="step3">
+              <h3 class="text-xl font-semibold mb-6">Customer Details</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label
+                    for="customerName"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Full Name</label
+                  >
+                  <input
+                    type="text"
+                    id="customerName"
+                    name="customerName"
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    placeholder="Your full name"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    for="customerPhone"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Phone Number</label
+                  >
+                  <input
+                    type="tel"
+                    id="customerPhone"
+                    name="customerPhone"
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    placeholder="Your contact number"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="mb-6">
+                <label
+                  for="customerEmail"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  id="customerEmail"
+                  name="customerEmail"
+                  class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  placeholder="Your email address"
+                  required
+                />
+              </div>
+              <div class="mb-6">
+                <label
+                  for="customerAddress"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Address</label
+                >
+                <textarea
+                  id="customerAddress"
+                  name="customerAddress"
+                  rows="3"
+                  class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  placeholder="Your address"
+                  required
+                ></textarea>
+              </div>
+              <div class="mb-6">
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="termsAccepted" required />
+                  <span class="checkmark"></span>
+                  I agree to the terms and conditions
+                </label>
+              </div>
+              <div class="flex justify-between">
+                <button
+                  type="button"
+                  id="step3Prev"
+                  class="border border-gray-300 px-6 py-2 rounded-button font-medium hover:bg-gray-50 transition-colors whitespace-nowrap"
+                >
+                  Previous
+                </button>
+                <button
+                  type="submit"
+                  id="submitBooking"
+                  class="bg-primary text-white px-6 py-2 rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap"
+                >
+                  Confirm Booking
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+          <p class="max-w-2xl mx-auto text-gray-600">
+            Have questions? Reach out to us directly or visit our location in
+            Nizampet, Hyderabad.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div>
+            <div class="bg-white rounded-lg shadow-md p-8">
+              <h3 class="text-xl font-semibold mb-6">Contact Information</h3>
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center text-primary mr-4"
+                  >
+                    <i class="ri-user-3-line ri-lg"></i>
+                  </div>
+                  <div>
+                    <p class="font-medium">Owner</p>
+                    <p class="text-gray-600">Vijay Kumar</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center text-primary mr-4"
+                  >
+                    <i class="ri-phone-line ri-lg"></i>
+                  </div>
+                  <div>
+                    <p class="font-medium">Phone</p>
+                    <p class="text-gray-600">+91 8801190874</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center text-primary mr-4"
+                  >
+                    <i class="ri-mail-line ri-lg"></i>
+                  </div>
+                  <div>
+                    <p class="font-medium">Email</p>
+                    <p class="text-gray-600">rudhwedh18@gmail.com</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center text-primary mr-4"
+                  >
+                    <i class="ri-map-pin-line ri-lg"></i>
+                  </div>
+                  <div>
+                    <p class="font-medium">Location</p>
+                    <p class="text-gray-600">Nizampet, Hyderabad, Telangana</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center text-primary mr-4"
+                  >
+                    <i class="ri-time-line ri-lg"></i>
+                  </div>
+                  <div>
+                    <p class="font-medium">Business Hours</p>
+                    <p class="text-gray-600">
+                      Monday - Saturday: 9:00 AM - 8:00 PM
+                    </p>
+                    <p class="text-gray-600">Sunday: 10:00 AM - 4:00 PM</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="bg-white rounded-lg shadow-md p-8">
+              <h3 class="text-xl font-semibold mb-6">Send Us a Message</h3>
+              <form
+                id="contactForm"
+                action="https://formsubmit.co/rudhwedh18@gmail.com"
+                method="POST"
+              >
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="New Contact Form Submission - Sri Shivs Sai Motors"
+                />
+                <input type="hidden" name="_captcha" value="false" />
+                <div class="mb-4">
+                  <label
+                    for="name"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Your Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    placeholder="Enter your name"
+                    required
+                  />
+                </div>
+                <div class="mb-4">
+                  <label
+                    for="email"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Email Address</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    placeholder="Enter your email"
+                    required
+                  />
+                </div>
+                <div class="mb-4">
+                  <label
+                    for="subject"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Subject</label
+                  >
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    placeholder="Enter subject"
+                    required
+                  />
+                </div>
+                <div class="mb-6">
+                  <label
+                    for="message"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Message</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    placeholder="Enter your message"
+                    required
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12">
+          <div class="bg-white rounded-lg shadow-md overflow-hidden h-80">
+            <div
+              class="h-full w-full"
+              style="background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png'); background-size: cover; background-position: center;"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Floating Action Button -->
+    <div class="fixed bottom-8 right-8 z-30">
+      <a
+        href="#booking"
+        class="w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-lg hover:bg-primary/90 transition-colors"
+      >
+        <i class="ri-calendar-check-line ri-lg text-white"></i>
+      </a>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <div class="flex items-center mb-4">
+              <div
+                class="w-10 h-10 flex items-center justify-center gear-animation mr-2"
+              >
+                <i class="ri-steering-2-fill ri-2x text-primary"></i>
+              </div>
+              <h1 class="font-['Pacifico'] text-2xl text-white">
+                Sri Shivs Sai Motors
+              </h1>
+            </div>
+            <p class="text-gray-400 mb-4">
+              Professional bike service and repair center in Nizampet,
+              Hyderabad. We provide quality service for all types of bikes.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition-colors"
+              >
+                <i class="ri-facebook-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition-colors"
+              >
+                <i class="ri-instagram-line"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition-colors"
+              >
+                <i class="ri-whatsapp-line"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#home"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#booking"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Book Service</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Terms & Conditions</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Business Hours</h3>
+            <ul class="space-y-2">
+              <li class="flex justify-between">
+                <span class="text-gray-400">Monday - Friday:</span>
+                <span class="text-gray-400">9:00 AM - 8:00 PM</span>
+              </li>
+              <li class="flex justify-between">
+                <span class="text-gray-400">Saturday:</span>
+                <span class="text-gray-400">9:00 AM - 8:00 PM</span>
+              </li>
+              <li class="flex justify-between">
+                <span class="text-gray-400">Sunday:</span>
+                <span class="text-gray-400">10:00 AM - 4:00 PM</span>
+              </li>
+            </ul>
+            <div class="mt-4">
+              <p class="text-gray-400">Contact: +91 8801190874</p>
+              <p class="text-gray-400">Email: rudhwedh18@gmail.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+          <p class="text-gray-400">
+            &copy; 2025 Sri Shivs Sai Motors. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- Login/Register Modal -->
+    <div
+      id="authModal"
+      class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden"
+    >
+      <div class="bg-white rounded-lg shadow-xl max-w-md w-full mx-4">
+        <div class="p-6">
+          <div class="flex justify-between items-center mb-6">
+            <h3 class="text-2xl font-semibold" id="modalTitle">Login</h3>
+            <button
+              id="closeAuthModal"
+              class="w-8 h-8 flex items-center justify-center"
+            >
+              <i class="ri-close-line ri-lg"></i>
+            </button>
+          </div>
+          <!-- Tab Switcher -->
+          <div class="flex bg-gray-100 p-1 rounded-full mb-6">
+            <button
+              id="loginTab"
+              class="flex-1 py-2 px-4 rounded-full tab-active whitespace-nowrap"
+            >
+              Login
+            </button>
+            <button
+              id="registerTab"
+              class="flex-1 py-2 px-4 rounded-full whitespace-nowrap"
+            >
+              Register
+            </button>
+          </div>
+          <!-- Login Form -->
+          <form id="loginForm" class="block">
+            <div class="mb-4">
+              <label
+                for="loginEmail"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Email or Phone</label
+              >
+              <input
+                type="text"
+                id="loginEmail"
+                name="loginEmail"
+                class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                placeholder="Enter your email or phone"
+                required
+              />
+            </div>
+            <div class="mb-6">
+              <label
+                for="loginPassword"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Password</label
+              >
+              <input
+                type="password"
+                id="loginPassword"
+                name="loginPassword"
+                class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                placeholder="Enter your password"
+                required
+              />
+            </div>
+            <div class="flex justify-between items-center mb-6">
+              <label class="custom-checkbox">
+                <input type="checkbox" name="rememberMe" />
+                <span class="checkmark"></span>
+                Remember me
+              </label>
+              <a href="#" class="text-primary hover:text-primary/80 text-sm"
+                >Forgot password?</a
+              >
+            </div>
+            <button
+              type="submit"
+              class="w-full bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap"
+            >
+              Login
+            </button>
+          </form>
+          <!-- Register Form -->
+          <form id="registerForm" class="hidden">
+            <div class="mb-4">
+              <label
+                for="registerName"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Full Name</label
+              >
+              <input
+                type="text"
+                id="registerName"
+                name="registerName"
+                class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                for="registerEmail"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Email Address</label
+              >
+              <input
+                type="email"
+                id="registerEmail"
+                name="registerEmail"
+                class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                for="registerPhone"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Phone Number</label
+              >
+              <input
+                type="tel"
+                id="registerPhone"
+                name="registerPhone"
+                class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                placeholder="Enter your phone number"
+                required
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                for="registerPassword"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Password</label
+              >
+              <input
+                type="password"
+                id="registerPassword"
+                name="registerPassword"
+                class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                placeholder="Create a password"
+                required
+              />
+            </div>
+            <div class="mb-6">
+              <label
+                for="confirmPassword"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Confirm Password</label
+              >
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                placeholder="Confirm your password"
+                required
+              />
+            </div>
+            <div class="mb-6">
+              <label class="custom-checkbox">
+                <input type="checkbox" name="termsAccepted" required />
+                <span class="checkmark"></span>
+                I agree to the terms and conditions
+              </label>
+            </div>
+            <button
+              type="submit"
+              class="w-full bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap"
+            >
+              Register
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Booking Confirmation Modal -->
+    <div
+      id="confirmationModal"
+      class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden"
+    >
+      <div class="bg-white rounded-lg shadow-xl max-w-md w-full mx-4 p-6">
+        <div class="text-center">
+          <div
+            class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"
+          >
+            <i class="ri-check-line ri-2x text-green-500"></i>
+          </div>
+          <h3 class="text-2xl font-semibold mb-2">Booking Confirmed!</h3>
+          <p class="text-gray-600 mb-6">
+            Your service booking has been successfully scheduled. We'll send a
+            confirmation to your email.
+          </p>
+          <div
+            id="bookingSummary"
+            class="bg-gray-50 p-4 rounded-lg text-left mb-6"
+          >
+            <h4 class="font-semibold mb-2">Booking Summary:</h4>
+            <p class="text-sm">
+              <span class="font-medium">Bike:</span>
+              <span id="summaryBike"></span>
+            </p>
+            <p class="text-sm">
+              <span class="font-medium">Service Date:</span>
+              <span id="summaryDate"></span>
+            </p>
+            <p class="text-sm">
+              <span class="font-medium">Time Slot:</span>
+              <span id="summaryTime"></span>
+            </p>
+          </div>
+          <button
+            id="closeConfirmationModal"
+            class="bg-primary text-white px-6 py-2 rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Header scroll effect
+        const header = document.querySelector(".header");
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 50) {
+            header.classList.add("scrolled");
+          } else {
+            header.classList.remove("scrolled");
+          }
+        });
+        // Mobile menu
+        const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+        const closeMenuBtn = document.getElementById("closeMenuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        mobileMenuBtn.addEventListener("click", function () {
+          mobileMenu.classList.remove("translate-x-full");
+        });
+        closeMenuBtn.addEventListener("click", function () {
+          mobileMenu.classList.add("translate-x-full");
+        });
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll("a");
+        mobileLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            mobileMenu.classList.add("translate-x-full");
+          });
+        });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        // Multi-step form
+        const step1 = document.getElementById("step1");
+        const step2 = document.getElementById("step2");
+        const step3 = document.getElementById("step3");
+        const step1Next = document.getElementById("step1Next");
+        const step2Prev = document.getElementById("step2Prev");
+        const step2Next = document.getElementById("step2Next");
+        const step3Prev = document.getElementById("step3Prev");
+        const progressSteps = document.querySelectorAll(".progress-step");
+        const progressLines = document.querySelectorAll(".progress-line");
+        step1Next.addEventListener("click", function () {
+          // Validate step 1
+          const bikeModel = document.getElementById("bikeModel").value;
+          const bikeColor = document.getElementById("bikeColor").value;
+          const bikeNumber = document.getElementById("bikeNumber").value;
+          const complaint = document.getElementById("complaint").value;
+          if (!bikeModel || !bikeColor || !bikeNumber || !complaint) {
+            alert("Please fill in all fields");
+            return;
+          }
+          step1.classList.remove("active");
+          step2.classList.add("active");
+          progressSteps[0].classList.add("completed");
+          progressSteps[1].classList.add("active");
+          progressLines[0].classList.add("active");
+        });
+        step2Prev.addEventListener("click", function () {
+          step2.classList.remove("active");
+          step1.classList.add("active");
+          progressSteps[1].classList.remove("active");
+          progressLines[0].classList.remove("active");
+        });
+        step2Next.addEventListener("click", function () {
+          // Validate step 2
+          const serviceDate = document.getElementById("serviceDate").value;
+          const timeSlot = document.querySelector('input[name="timeSlot"]:checked');
+          if (!serviceDate || !timeSlot) {
+            alert("Please select a date and time slot");
+            return;
+          }
+          step2.classList.remove("active");
+          step3.classList.add("active");
+          progressSteps[1].classList.add("completed");
+          progressSteps[2].classList.add("active");
+          progressLines[1].classList.add("active");
+        });
+        step3Prev.addEventListener("click", function () {
+          step3.classList.remove("active");
+          step2.classList.add("active");
+          progressSteps[2].classList.remove("active");
+          progressLines[1].classList.remove("active");
+        });
+        // Booking form submission
+        const bookingForm = document.getElementById("bookingForm");
+        const confirmationModal = document.getElementById("confirmationModal");
+        const closeConfirmationModal = document.getElementById(
+          "closeConfirmationModal",
+        );
+        bookingForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          // Validate step 3
+          const customerName = document.getElementById("customerName").value;
+          const customerPhone = document.getElementById("customerPhone").value;
+          const customerEmail = document.getElementById("customerEmail").value;
+          const customerAddress = document.getElementById("customerAddress").value;
+          const termsAccepted = document.querySelector(
+            'input[name="termsAccepted"]',
+          ).checked;
+          if (
+            !customerName ||
+            !customerPhone ||
+            !customerEmail ||
+            !customerAddress ||
+            !termsAccepted
+          ) {
+            alert("Please fill in all fields and accept the terms");
+            return;
+          }
+          // Prepare booking data
+          const bookingData = {
+            bikeDetails: {
+              model: document.getElementById("bikeModel").value,
+              color: document.getElementById("bikeColor").value,
+              number: document.getElementById("bikeNumber").value,
+              complaint: document.getElementById("complaint").value,
+            },
+            serviceDetails: {
+              date: document.getElementById("serviceDate").value,
+              timeSlot: document.querySelector('input[name="timeSlot"]:checked')
+                .value,
+            },
+            customerDetails: {
+              name: customerName,
+              phone: customerPhone,
+              email: customerEmail,
+              address: customerAddress,
+            },
+          };
+          // Send booking data to email
+          const emailBody = `
+      New Bike Service Booking Details:
+      Bike Information:
+      - Model: ${bookingData.bikeDetails.model}
+      - Color: ${bookingData.bikeDetails.color}
+      - Registration Number: ${bookingData.bikeDetails.number}
+      - Service/Complaint: ${bookingData.bikeDetails.complaint}
+      Service Schedule:
+      - Date: ${bookingData.serviceDetails.date}
+      - Time Slot: ${bookingData.serviceDetails.timeSlot}
+      Customer Information:
+      - Name: ${bookingData.customerDetails.name}
+      - Phone: ${bookingData.customerDetails.phone}
+      - Email: ${bookingData.customerDetails.email}
+      - Address: ${bookingData.customerDetails.address}
+      `;
+          fetch("https://formsubmit.co/rudhwedh18@gmail.com", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+            },
+            body: new URLSearchParams({
+              name: bookingData.customerDetails.name,
+              email: bookingData.customerDetails.email,
+              _subject: `New Bike Service Booking - ${bookingData.bikeDetails.model}`,
+              message: emailBody,
+            }),
+          })
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error("Network response was not ok");
+              }
+              return response.json();
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+            });
+          // Set booking summary
+          document.getElementById("summaryBike").textContent =
+            document.getElementById("bikeModel").value +
+            " (" +
+            document.getElementById("bikeColor").value +
+            ")";
+          document.getElementById("summaryDate").textContent =
+            document.getElementById("serviceDate").value;
+          document.getElementById("summaryTime").textContent = document.querySelector(
+            'input[name="timeSlot"]:checked',
+          ).value;
+          // Show confirmation modal
+          confirmationModal.classList.remove("hidden");
+          // Send form data to email (would be implemented with backend)
+          console.log("Form submitted, would send email to rudhwedh18@gmail.com");
+        });
+        closeConfirmationModal.addEventListener("click", function () {
+          confirmationModal.classList.add("hidden");
+          bookingForm.reset();
+          // Reset form to step 1
+          step3.classList.remove("active");
+          step1.classList.add("active");
+          progressSteps.forEach((step) => {
+            step.classList.remove("active", "completed");
+          });
+          progressLines.forEach((line) => {
+            line.classList.remove("active");
+          });
+          progressSteps[0].classList.add("active");
+        });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        // Authentication modal
+        const loginBtn = document.getElementById("loginBtn");
+        const mobileLoginBtn = document.getElementById("mobileLoginBtn");
+        const authModal = document.getElementById("authModal");
+        const closeAuthModal = document.getElementById("closeAuthModal");
+        const loginTab = document.getElementById("loginTab");
+        const registerTab = document.getElementById("registerTab");
+        const loginForm = document.getElementById("loginForm");
+        const registerForm = document.getElementById("registerForm");
+        const modalTitle = document.getElementById("modalTitle");
+        function openAuthModal() {
+          authModal.classList.remove("hidden");
+        }
+        function closeModal() {
+          authModal.classList.add("hidden");
+        }
+        loginBtn.addEventListener("click", openAuthModal);
+        mobileLoginBtn.addEventListener("click", function () {
+          openAuthModal();
+          document.getElementById("mobileMenu").classList.add("translate-x-full");
+        });
+        closeAuthModal.addEventListener("click", closeModal);
+        // Tab switching
+        loginTab.addEventListener("click", function () {
+          loginTab.classList.add("tab-active");
+          registerTab.classList.remove("tab-active");
+          loginForm.classList.remove("hidden");
+          registerForm.classList.add("hidden");
+          modalTitle.textContent = "Login";
+        });
+        registerTab.addEventListener("click", function () {
+          registerTab.classList.add("tab-active");
+          loginTab.classList.remove("tab-active");
+          registerForm.classList.remove("hidden");
+          loginForm.classList.add("hidden");
+          modalTitle.textContent = "Register";
+        });
+        // Form submissions
+        loginForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          console.log("Login form submitted");
+          closeModal();
+        });
+        registerForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          console.log("Register form submitted");
+          closeModal();
+        });
+        // Contact form submission
+        const contactForm = document.getElementById("contactForm");
+        contactForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert("Your message has been sent. We will get back to you soon!");
+          contactForm.reset();
+        });
+        // Close modals when clicking outside
+        window.addEventListener("click", function (e) {
+          if (e.target === authModal) {
+            closeModal();
+          }
+          if (e.target === document.getElementById("confirmationModal")) {
+            document.getElementById("confirmationModal").classList.add("hidden");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
